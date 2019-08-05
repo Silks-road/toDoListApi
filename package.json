@@ -1,0 +1,23 @@
+{
+  "name": "todolistapi",
+  "version": "1.0.0",
+  "description": "RESTful toDoListApi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: No test specified\" && exit 1"
+  },
+  "keywords": [
+    "RESTful",
+    "API"
+  ],
+  "author": "Mervé Silk",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Silks-road/toDoListApi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Silks-road/toDoListApi/issues"
+  },
+  "homepage": "https://github.com/Silks-road/toDoListApi#readme"
+}
