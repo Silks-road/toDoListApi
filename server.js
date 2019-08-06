@@ -2,7 +2,7 @@ var express = require("express"),
   app = express(),
   port = process.env.PORT || 3000,
   mongoose = require("mongoose"),
-  Task = require(".api/models/toDoListModel"),
+  Task = require(".api/models/toDoListModel"), //created model loading here
   bodyParser = require("body-parser");
 
 // mongoose instance connection url
@@ -18,3 +18,12 @@ routes(app);
 app.listen(port);
 
 console.log("toDoListApi RESTful API Server started on: " + port);
+//
+
+// var express = require('express'),
+//   app = express(),
+//   port = process.env.PORT || 3000;
+//
+// app.listen(port);
+//
+// console.log('todo list RESTful API server started on: ' + port);

@@ -4,10 +4,10 @@ module.exports = function(app) {
 
   app.route("/tasks")
     .get(toDoList.list_all_tasks)
-    .get(toDoList.create_a_task);
+    .post(toDoList.create_a_task);
 
   ap.route("/tasks/:taskId")
     .get(toDoList.read_a_task)
-    .get(toDoList.update_a_task)
-    .get(toDoList.delete_a_task);
+    .put(toDoList.update_a_task)
+    .delete(toDoList.delete_a_task);
 };
