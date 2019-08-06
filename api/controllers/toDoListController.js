@@ -38,9 +38,7 @@ exports.update_a_task = function(request, response) {
 };
 
 exports.delete_a_task = function(request, response) {
-  Task.remove({
-    _id: request.params.taskId
-  }, function(error, task) {
+  Task.remove({ _id: request.params.taskId }, function(error, task) {
       if (error)
         response.send(error);
       request.json({ message: "Task has been successfully deleted" });
