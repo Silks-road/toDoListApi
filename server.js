@@ -19,10 +19,6 @@ app.listen(port);
 
 console.log("toDoListApi RESTful API Server started on: " + port);
 
-// var express = require('express'),
-//   app = express(),
-//   port = process.env.PORT || 3000;
-//
-// app.listen(port);
-//
-// console.log('todo list RESTful API server started on: ' + port);
+app.use(function(response, request) {
+  response.status(404).send({ url: request.originUrl + "not found..." })
+});
