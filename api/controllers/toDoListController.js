@@ -1,4 +1,3 @@
-
 "use strict";
 
 var mongoose = require("mongoose"),
@@ -8,7 +7,7 @@ exports.list_all_tasks = function(request, response) {
   Task.find({}, function(error, task) {
     if (error)
       response.send(error);
-    request.json(task);
+    response.json(task);
   });
 };
 
@@ -17,7 +16,7 @@ exports.create_a_task = function(request, response) {
   new_task.save(function(error, task) {
     if (error)
       response.send(error);
-    request.json(task);
+    response.json(task);
   });
 };
 
@@ -25,7 +24,7 @@ exports.read_a_task = function(request, response) {
   Task.findById(request.params.taskId, function(error, task) {
     if (error)
       response.send(error);
-    request.json(task);
+    response.json(task);
   });
 };
 
@@ -33,7 +32,7 @@ exports.update_a_task = function(request, response) {
   Task.findOneAndUpdate({ _id: request.params.taskID }, request.body, { new: true }, function(error, task){
     if (error)
       response.send(error);
-    request.json(task);
+    response.json(task);
   });
 };
 
